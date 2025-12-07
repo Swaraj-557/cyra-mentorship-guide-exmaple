@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaraj Satyam | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Sky blue */
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tech-badge {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Swaraj Satyam</h1>
+            <p class="tagline">“Code. Secure. Create.”</p>
+            <div style="margin-top: 1rem; color: var(--text-secondary);">
+                👋 Yo, I'm Swaraj
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                I am a <span class="highlight">Google Cybersecurity Professional Certified</span> expert and the Founder of <span class="highlight">Cyra Company</span>. 
+                I build AI Voice Assistants and explore the intersection of Full Stack Development and Ethical Hacking.
+                Always upgrading myself, just like my AI.
+            </p>
+            <p style="color: var(--text-secondary);">
+                <strong>Affiliations:</strong> Microsoft Tech Community Member
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>What I Build</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>AI Voice Assistants</h3>
+                    <p>Builder of intelligent voice assistants: <strong>Jarvis</strong>, <strong>Bankai</strong>, <strong>Raju</strong>, and <strong>Cyra</strong>.</p>
+                </div>
+                <div class="card">
+                    <h3>Cyra Company</h3>
+                    <p>Founder of Cyra Company, focusing on innovative tech solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Tech Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TailwindCSS</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Azure</span>
+                <span class="tech-badge">OpenAI APIs</span>
+                <span class="tech-badge">GitHub</span>
+                <span class="tech-badge">Cybersecurity</span>
+                <span class="tech-badge">AI/ML</span>
+                <span class="tech-badge">Web Development</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Connect With Me</h2>
+            <div class="contact-links">
+                <a href="mailto:cyra@cyra-assistant.tech" class="contact-link">📧 cyra@cyra-assistant.tech</a>
+                <a href="https://cyra-assistant.tech" target="_blank" class="contact-link">🌐 cyra-assistant.tech</a>
+                <a href="https://instagram.com/bankai_877" target="_blank" class="contact-link">📸 @bankai_877</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>✨ Always upgrading myself, just like my AI.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">&copy; 2025 Swaraj Satyam</p>
+    </footer>
+
+</body>
+</html>

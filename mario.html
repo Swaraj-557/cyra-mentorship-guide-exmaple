@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #5c94fc; /* Mario sky blue */
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ground decoration */
+        .ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-image: repeating-linear-gradient(
+                45deg,
+                #c84c0c 0,
+                #c84c0c 20px,
+                #e45c10 20px,
+                #e45c10 40px
+            );
+            border-top: 4px solid #000;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 2rem;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Corner "screws" or dots for the box style */
+        .login-container::before, .login-container::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .login-container::before { top: 10px; left: 10px; }
+        .login-container::after { top: 10px; right: 10px; }
+
+        h1 {
+            color: #e60012; /* Mario Red */
+            text-shadow: 2px 2px #000;
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #000;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            border: 4px solid #000;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            background-color: #fff9c4; /* Light yellow */
+        }
+
+        button {
+            background-color: #00b300; /* Pipe Green */
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            padding: 15px 20px;
+            border: 4px solid #000;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            transition: transform 0.1s;
+        }
+
+        button:active {
+            transform: translate(4px, 4px);
+            box-shadow: none;
+        }
+
+        button:hover {
+            background-color: #00cc00;
+        }
+
+        /* Decorative elements */
+        .coin {
+            width: 30px;
+            height: 40px;
+            background: #ffd700;
+            border: 4px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset -5px -5px 0 rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .cloud {
+            position: absolute;
+            background: #fff;
+            border-radius: 20px;
+            width: 100px;
+            height: 40px;
+            opacity: 0.8;
+        }
+        .cloud::after, .cloud::before {
+            content: '';
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .cloud::after { width: 50px; height: 50px; top: -25px; left: 15px; }
+        .cloud::before { width: 40px; height: 40px; top: -15px; left: 50px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="cloud" style="top: 15%; left: 10%;"></div>
+    <div class="cloud" style="top: 25%; right: 15%;"></div>
+
+    <div class="login-container">
+        <div class="coin"></div>
+        <h1>MARIO LOGIN</h1>
+        <form>
+            <div class="input-group">
+                <label for="username">PLAYER 1</label>
+                <input type="text" id="username" placeholder="USERNAME">
+            </div>
+            <div class="input-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" placeholder="********">
+            </div>
+            <button type="submit">START GAME</button>
+        </form>
+    </div>
+
+    <div class="ground"></div>
+
+</body>
+</html>
